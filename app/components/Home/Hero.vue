@@ -7,8 +7,10 @@
     :links="links"
     :ui="{
       root: 'pt-16 pb-20 overflow-hidden',
-      headline: 'inline-flex items-center px-3 py-1 rounded-full bg-[#acedda] text-[#065043] text-xs font-bold tracking-wider uppercase',
-      title: 'font-[Manrope] text-5xl md:text-7xl font-extrabold tracking-tighter leading-[1.1] text-[#002f55]',
+      headline:
+        'inline-flex items-center px-3 py-1 rounded-full bg-[#acedda] text-[#065043] text-xs font-bold tracking-wider uppercase',
+      title:
+        'font-[Manrope] text-5xl md:text-7xl font-extrabold tracking-tighter leading-[1.1] text-[#002f55]',
       description: 'text-lg md:text-xl text-[#3f4945] leading-relaxed',
     }"
   >
@@ -17,11 +19,14 @@
       <div
         class="relative z-10 rounded-md overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500"
       >
-        <img
-          src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80"
-          alt="Modern office meeting"
+        <video
+          src="/vid1.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
           class="w-full aspect-[4/5] object-cover"
-        />
+        ></video>
       </div>
 
       <div
@@ -31,8 +36,12 @@
           <UIcon name="i-lucide-zap" class="w-6 h-6" />
         </div>
         <div>
-          <div class="text-sm font-bold text-[#002f55]">Automatisation Totale</div>
-          <div class="text-xs text-[#3f4945]">Production 24/7 pour votre business</div>
+          <div class="text-sm font-bold text-[#002f55]">
+            Automatisation Totale
+          </div>
+          <div class="text-xs text-[#3f4945]">
+            Production 24/7 pour votre business
+          </div>
         </div>
       </div>
     </div>
@@ -46,20 +55,20 @@
 </template>
 
 <script setup lang="ts">
-import type { ButtonProps } from '@nuxt/ui'
+import type { ButtonProps } from "@nuxt/ui";
 
 const links = ref<ButtonProps[]>([
   {
-    label: 'Commencez Maintenant',
-    color: 'neutral',
-    size: 'xl',
+    label: "Commencez Maintenant",
+    color: "neutral",
+    size: "xl",
   },
   {
-    label: 'Prendre un RDV',
-    color: 'neutral',
-    variant: 'outline',
-    size: 'xl',
-    leadingIcon: 'i-lucide-calendar',
+    label: "Prendre un RDV",
+    color: "neutral",
+    variant: "outline",
+    size: "xl",
+    leadingIcon: "i-lucide-calendar",
   },
-])
+]);
 </script>
