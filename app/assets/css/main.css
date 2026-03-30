@@ -1,0 +1,123 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-headline: 'Manrope', system-ui, sans-serif;
+}
+
+@theme static {
+  /* ============================================
+     FLOW BLUE (Primary) - Exact: #002f55
+     ============================================ */
+  --color-flow-blue-50: #e6f0f8;
+  --color-flow-blue-100: #cce0f1;
+  --color-flow-blue-200: #99c2e3;
+  --color-flow-blue-300: #66a3d5;
+  --color-flow-blue-400: #3385c7;
+  --color-flow-blue-500: #002f55;  /* PRIMARY EXACT */
+  --color-flow-blue-600: #002a4d;
+  --color-flow-blue-700: #002444;
+  --color-flow-blue-800: #001f3c;
+  --color-flow-blue-900: #001933;
+  --color-flow-blue-950: #00142a;
+
+  /* ============================================
+     FLOW GREEN (Secondary) - Exact: #29695b
+     ============================================ */
+  --color-flow-green-50: #eaf5f3;
+  --color-flow-green-100: #d5ebe7;
+  --color-flow-green-200: #acd7cf;
+  --color-flow-green-300: #82c3b7;
+  --color-flow-green-400: #59af9f;
+  --color-flow-green-500: #29695b;  /* SECONDARY EXACT */
+  --color-flow-green-600: #255f52;
+  --color-flow-green-700: #205448;
+  --color-flow-green-800: #1c4a3f;
+  --color-flow-green-900: #173f35;
+  --color-flow-green-950: #12352c;
+
+  /* ============================================
+     FLOW AMBER (Tertiary) - Exact: #fabd00
+     ============================================ */
+  --color-flow-amber-50: #fff9e6;
+  --color-flow-amber-100: #fff3cc;
+  --color-flow-amber-200: #ffe799;
+  --color-flow-amber-300: #ffdb66;
+  --color-flow-amber-400: #ffcf33;
+  --color-flow-amber-500: #fabd00;  /* TERTIARY FIXED DIM EXACT */
+  --color-flow-amber-600: #dfa800;  /* ON TERTIARY CONTAINER EXACT */
+  --color-flow-amber-700: #c89600;
+  --color-flow-amber-800: #af8300;
+  --color-flow-amber-900: #966f00;
+  --color-flow-amber-950: #7d5c00;
+
+  /* ============================================
+     FLOW NEUTRAL (Surface colors)
+     ============================================ */
+  --color-flow-neutral-50: #ffffff;   /* Surface Lowest */
+  --color-flow-neutral-100: #f9f9fc;  /* BACKGROUND/SURFACE EXACT */
+  --color-flow-neutral-200: #f3f3f6;  /* Surface Container Low */
+  --color-flow-neutral-300: #eeeef0;  /* Surface Container */
+  --color-flow-neutral-400: #e8e8ea;  /* Surface Container High */
+  --color-flow-neutral-500: #e2e2e5;  /* Surface Container Highest/Surface Variant */
+  --color-flow-neutral-600: #dadadc;  /* Surface Dim */
+  --color-flow-neutral-700: #bfc9c4;  /* Outline Variant */
+  --color-flow-neutral-800: #707975;  /* Outline */
+  --color-flow-neutral-900: #3f4945;  /* On Surface Variant */
+  --color-flow-neutral-950: #1a1c1e;  /* ON SURFACE EXACT */
+
+  /* ============================================
+     FLOW ERROR
+     ============================================ */
+  --color-flow-error-500: #ba1a1a;    /* ERROR EXACT */
+  --color-flow-error-100: #ffdad6;    /* Error Container */
+}
+
+:root {
+  --ui-radius: 0.125rem;  /* DEFAULT: 0.125rem (2px) */
+  
+  /* ============================================
+     VARIABLES SÉMANTIQUES EXACTES
+     ============================================ */
+  
+  /* Background & Surface */
+  --ui-bg: #f9f9fc;
+  --ui-bg-muted: #f3f3f6;
+  --ui-bg-elevated: #eeeef0;
+  --ui-bg-inverted: #1a1c1e;
+  
+  /* Text */
+  --ui-text: #1a1c1e;
+  --ui-text-muted: #3f4945;
+  --ui-text-dimmed: #707975;
+  --ui-text-inverted: #ffffff;
+  
+  /* Borders */
+  --ui-border: #e2e2e5;
+  --ui-border-muted: #bfc9c4;
+  --ui-border-inverted: #707975;
+  
+  /* Primary */
+  --ui-primary: #002f55;
+  --ui-primary-muted: #00457a;
+  --ui-primary-dimmed: #a1c9ff;
+  --ui-primary-inverted: #ffffff;
+  
+  /* Secondary */
+  --ui-secondary: #29695b;
+  --ui-secondary-muted: #acedda;
+  --ui-secondary-dimmed: #94d3c1;
+  --ui-secondary-inverted: #ffffff;
+  
+  /* Tertiary/Accent */
+  --ui-tertiary: #3c2b00;
+  --ui-tertiary-muted: #574000;
+  --ui-tertiary-dimmed: #fabd00;
+  --ui-tertiary-inverted: #ffffff;
+  
+  /* Error */
+  --ui-error: #ba1a1a;
+  --ui-error-muted: #ffdad6;
+  --ui-error-inverted: #ffffff;
+}
