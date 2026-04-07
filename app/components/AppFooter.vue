@@ -1,92 +1,81 @@
+<script setup lang="ts">
+import type { FooterColumn } from '@nuxt/ui'
+
+// Configuration des colonnes de liens
+const columns: FooterColumn[] = [
+  {
+    label: 'Produit',
+    children: [
+      { label: 'Fonctionnalités', to: '#' },
+      { label: 'Tarification', to: '/#pricing' },
+      { label: 'Démo en direct', to: '/demo'}
+    ]
+  },
+  {
+    label: 'Compagnie',
+    children: [
+      { label: 'À propos', to: '#' },
+      { label: 'Contact', to: '#' },
+      { label: 'Support', to: '#' }
+    ]
+  },
+  {
+    label: 'Légal',
+    children: [
+      { label: 'Privacy Policy', to: '#' },
+      { label: 'Terms of Service', to: '#' }
+    ]
+  }
+]
+
+// Icônes sociales
+const socials = [
+  { icon: 'i-lucide-share-2', to: '#', label: 'Partager' },
+  { icon: 'i-lucide-mail', to: '#', label: 'Email' }
+]
+</script>
+
 <template>
-  <footer class="bg-[#f3f3f6] py-20">
-    <UContainer>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-        <!-- Brand -->
-        <div class="space-y-4">
-          <div class="font-[Manrope] font-bold text-[#002f55] text-xl">
-            Flow
-          </div>
-          <p class="text-xs md:text-sm text-[#3f4945] leading-relaxed">
-            Expertise digitale pour les leaders de demain en Afrique francophone.
+  <UFooter class="bg-flow-neutral-200">
+    <template #top>
+      <UContainer>
+        <UFooterColumns :columns="columns" class="gap-12">
+          <!-- Slot personnalisé pour la colonne brand -->
+          <template #left>
+            <div class="space-y-4">
+              <div class="font-[Manrope] font-bold text-flow-blue-500 text-xl">
+                Flow
+              </div>
+              <p class="text-xs md:text-sm text-flow-neutral-900 leading-relaxed">
+                Expertise digitale pour les leaders de demain en Afrique francophone.
+              </p>
+              <div class="flex gap-4">
+                <UButton
+                  v-for="social in socials"
+                  :key="social.icon"
+                  :icon="social.icon"
+                  :to="social.to"
+                  color="neutral"
+                  variant="ghost"
+                  size="sm"
+                  class="text-flow-neutral-900 hover:text-flow-blue-500"
+                />
+              </div>
+            </div>
+          </template>
+        </UFooterColumns>
+      </UContainer>
+    </template>
+
+    <template #bottom>
+      <USeparator class="border-flow-neutral-500" />
+      <UContainer>
+        <div class="flex items-center justify-between py-8">
+          <p class="text-xs md:text-sm text-flow-neutral-900">
+            © 2026 TECH2WORK. All rights reserved.
           </p>
-          <div class="flex gap-4">
-            <UIcon name="i-lucide-share-2" class="text-[#3f4945] hover:text-[#002f55] cursor-pointer transition-colors" />
-            <UIcon name="i-lucide-mail" class="text-[#3f4945] hover:text-[#002f55] cursor-pointer transition-colors" />
-          </div>
         </div>
-
-        <!-- Links -->
-        <div>
-          <h4 class="font-[Manrope] font-bold text-[#002f55] mb-6 text-sm uppercase tracking-widest">
-            Produit
-          </h4>
-          <ul class="space-y-3 text-xs md:text-sm text-[#3f4945]">
-            <li>
-              <NuxtLink to="#" class="hover:text-[#002f55] transition-transform hover:translate-x-1 inline-block">
-                Fonctionnalités
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/#pricing" class="hover:text-[#002f55] transition-transform hover:translate-x-1 inline-block">
-                Tarification
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/demo" class="text-[#29695b] underline">
-                Démo en direct
-              </NuxtLink>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="font-[Manrope] font-bold text-[#002f55] mb-6 text-sm uppercase tracking-widest">
-            Compagnie
-          </h4>
-          <ul class="space-y-3 text-xs md:text-sm text-[#3f4945]">
-            <li>
-              <NuxtLink to="#" class="hover:text-[#002f55] transition-transform hover:translate-x-1 inline-block">
-                À propos
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="#" class="hover:text-[#002f55] transition-transform hover:translate-x-1 inline-block">
-                Contact
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="#" class="hover:text-[#002f55] transition-transform hover:translate-x-1 inline-block">
-                Support
-              </NuxtLink>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="font-[Manrope] font-bold text-[#002f55] mb-6 text-sm uppercase tracking-widest">
-            Légal
-          </h4>
-          <ul class="space-y-3 text-xs md:text-sm text-[#3f4945]">
-            <li>
-              <NuxtLink to="#" class="hover:text-[#002f55] transition-transform hover:translate-x-1 inline-block">
-                Privacy Policy
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="#" class="hover:text-[#002f55] transition-transform hover:translate-x-1 inline-block">
-                Terms of Service
-              </NuxtLink>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="mt-12 pt-8 border-t border-[#e2e2e5]">
-        <p class="text-xs md:text-sm text-[#3f4945]">
-          © 2026 TECH2WORK. All rights reserved.
-        </p>
-      </div>
-    </UContainer>
-  </footer>
+      </UContainer>
+    </template>
+  </UFooter>
 </template>

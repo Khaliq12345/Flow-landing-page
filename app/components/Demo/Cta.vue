@@ -28,6 +28,7 @@
 import type { ButtonProps } from "@nuxt/ui";
 
 const links = ref<ButtonProps[]>([
+  // need to setup contact method/link
   {
     label: "Contactez-nous",
     size: "xl",
@@ -37,6 +38,7 @@ const links = ref<ButtonProps[]>([
     label: "Voir les tarifs",
     size: "xl",
     variant: "outline",
+    to: "/#pricing",
     ui: {
       base: "bg-white/10 backdrop-blur-md text-white border-white/20 font-bold hover:bg-white/20",
     },
