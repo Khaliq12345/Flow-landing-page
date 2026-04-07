@@ -14,22 +14,27 @@
       </div>
       <div class="flex gap-2">
         <button
-          v-for="icon in ['i-lucide-arrow-left', 'i-lucide-arrow-right']"
-          :key="icon"
+          @click="prevSlide"
           class="text-flow-blue-500 p-3 border border-flow-neutral-700/30 rounded-full cursor-pointer hover:bg-white transition-colors"
         >
-          <UIcon :name="icon" />
+          <UIcon name="i-lucide-arrow-left" />
+        </button>
+        <button
+          @click="nextSlide"
+          class="text-flow-blue-500 p-3 border border-flow-neutral-700/30 rounded-full cursor-pointer hover:bg-white transition-colors"
+        >
+          <UIcon name="i-lucide-arrow-right" />
         </button>
       </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:items-stretch">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:items-stretch mt-8">
       <!-- Main Video -->
       <div
         class="md:col-span-8 relative overflow-hidden rounded-[0.5rem] bg-flow-neutral-500 aspect-video group"
       >
         <video
-          src="/vid1.mp4"
+          :src="currentSlide.video"
           autoplay
           loop
           muted
@@ -43,22 +48,19 @@
             Documentaire de Marque
           </p>
           <h3 class="text-2xl font-bold font-[Manrope]">
-            L'Innovation à Abidjan
+            {{ currentSlide.videoTitle }}
           </h3>
         </div>
       </div>
 
-      <!-- Side Video -->
+      <!-- Side Image -->
       <div class="md:col-span-4">
         <div
-          class="relative overflow-hidden rounded-[0.5rem] bg-flow-neutral-500 h-full group"
+          class="relative overflow-hidden rounded-[0.5rem] bg-flow-neutral-500 h-full min-h-75 md:min-h-0 group"
         >
-          <video
-            src="/vid2.mp4"
-            autoplay
-            loop
-            muted
-            playsinline
+          <img
+            :src="currentSlide.image"
+            :alt="currentSlide.imageTitle"
             class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
           />
           <div
@@ -68,10 +70,64 @@
               name="i-lucide-trending-up"
               class="text-flow-amber-500 mb-2 w-8 h-8"
             />
-            <h4 class="text-white font-bold text-lg">Croissance B2B</h4>
+            <h4 class="text-white font-bold text-lg">{{ currentSlide.imageTitle }}</h4>
           </div>
         </div>
       </div>
     </div>
   </UPageSection>
 </template>
+
+<script setup>
+const currentIndex = ref(0)
+
+// Tes 6 paires vidéo + image
+const slides = [
+  {
+    video: '/demo/vid1.mp4',
+    videoTitle: "L'Innovation à Abidjan",
+    image: '/demo/images/img1.jpg',
+    imageTitle: 'Croissance B2B'
+  },
+  {
+    video: '/demo/vid2.mp4',
+    videoTitle: 'Marketing Digital',
+    image: '/demo/images/img2.jpg',
+    imageTitle: 'Stratégie Commercial'
+  },
+  {
+    video: '/demo/vid3.mp4',
+    videoTitle: 'Production Vidéo',
+    image: '/demo/images/img3.jpg',
+    imageTitle: 'Brand Content'
+  },
+  {
+    video: '/demo/vid4.mp4',
+    videoTitle: 'Réseaux Sociaux',
+    image: '/demo/images/img4.jpg',
+    imageTitle: 'Engagement Client'
+  },
+  {
+    video: '/demo/vid5.mp4',
+    videoTitle: 'Storytelling',
+    image: '/demo/images/img5.jpg',
+    imageTitle: 'Visual Identity'
+  },
+  {
+    video: '/demo/vid6.mp4',
+    videoTitle: 'Motion Design',
+    image: '/demo/images/img6.jpg',
+    imageTitle: 'Creative Campaign'
+  }
+]
+
+const currentSlide = computed(() => slides[currentIndex.value])
+
+const nextSlide = () => {
+  currentIndex.value = (currentIndex.value + 1) % slides.length
+}
+
+const prevSlide = () => {
+  currentIndex.value = (currentIndex.value - 1 + slides.length) % slides.length
+}
+</script>
