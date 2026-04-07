@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#f9f9fc]">
+  <div class="bg-flow-neutral-100">
     <AppHeader />
 
     <main class="pt-24">

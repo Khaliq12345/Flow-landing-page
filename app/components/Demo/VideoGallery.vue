@@ -1,84 +1,77 @@
 <template>
-  <section class="bg-[#f3f3f6] py-16">
-    <UContainer>
+  <UPageSection class="bg-flow-neutral-200">
+    <div class="flex flex-col md:flex-row justify-between items-end gap-4">
+      <div class="max-w-xl">
+        <h2
+          class="font-[Manrope] text-3xl font-bold text-flow-blue-500 mb-4 tracking-tight"
+        >
+          Storytelling Vidéo
+        </h2>
+        <p class="text-flow-neutral-900">
+          Des formats courts optimisés pour l'engagement émotionnel et la
+          conversion directe sur les réseaux sociaux.
+        </p>
+      </div>
+      <div class="flex gap-2">
+        <button
+          v-for="icon in ['i-lucide-arrow-left', 'i-lucide-arrow-right']"
+          :key="icon"
+          class="text-flow-blue-500 p-3 border border-flow-neutral-700/30 rounded-full cursor-pointer hover:bg-white transition-colors"
+        >
+          <UIcon :name="icon" />
+        </button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:items-stretch">
+      <!-- Main Video -->
       <div
-        class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4"
+        class="md:col-span-8 relative overflow-hidden rounded-[0.5rem] bg-flow-neutral-500 aspect-video group"
       >
-        <div class="max-w-xl">
-          <h2
-            class="font-[Manrope] text-3xl font-bold text-[#002f55] mb-4 tracking-tight"
+        <video
+          src="/vid1.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+          class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+        />
+        <div class="absolute bottom-6 left-6 text-white">
+          <p
+            class="text-xs font-bold uppercase tracking-widest mb-1 opacity-80"
           >
-            Storytelling Vidéo
-          </h2>
-          <p class="text-[#3f4945]">
-            Des formats courts optimisés pour l'engagement émotionnel et la
-            conversion directe sur les réseaux sociaux.
+            Documentaire de Marque
           </p>
-        </div>
-        <div class="flex gap-2">
-          <!-- <button
-            class="text-[#002f55] p-2 border border-[#bfc9c4]/30 rounded-full cursor-pointer hover:bg-white transition-colors"
-          >
-            <UIcon name="i-lucide-arrow-left" />
-          </button>
-          <button
-            class="text-[#002f55] p-2 border border-[#bfc9c4]/30 rounded-full cursor-pointer hover:bg-white transition-colors"
-          >
-            <UIcon name="i-lucide-arrow-right" />
-          </button> -->
+          <h3 class="text-2xl font-bold font-[Manrope]">
+            L'Innovation à Abidjan
+          </h3>
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:items-stretch">
-        <!-- Main Video -->
+      <!-- Side Video -->
+      <div class="md:col-span-4">
         <div
-          class="md:col-span-8 relative overflow-hidden rounded-[0.5rem] bg-[#e2e2e5] aspect-video group"
+          class="relative overflow-hidden rounded-[0.5rem] bg-flow-neutral-500 h-full group"
         >
           <video
-            src="/vid1.mp4"
+            src="/vid2.mp4"
             autoplay
             loop
             muted
             playsinline
             class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
           />
-          <div class="absolute bottom-6 left-6 text-white">
-            <p
-              class="text-xs font-bold uppercase tracking-widest mb-1 opacity-80"
-            >
-              Documentaire de Marque
-            </p>
-            <h3 class="text-2xl font-bold font-[Manrope]">
-              L'Innovation à Abidjan
-            </h3>
-          </div>
-        </div>
-
-        <!-- Side Video -->
-        <div class="md:col-span-4">
           <div
-            class="relative overflow-hidden rounded-[0.5rem] bg-[#e2e2e5] h-full group"
+            class="absolute inset-0 bg-linear-to-t from-flow-blue-500/80 to-transparent flex flex-col justify-end p-6"
           >
-            <video
-              src="/vid2.mp4"
-              autoplay
-              loop
-              muted
-              playsinline
-              class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            <UIcon
+              name="i-lucide-trending-up"
+              class="text-flow-amber-500 mb-2 w-8 h-8"
             />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-[#002f55]/80 to-transparent flex flex-col justify-end p-6"
-            >
-              <UIcon
-                name="i-lucide-trending-up"
-                class="text-[#fabd00] mb-2 w-8 h-8"
-              />
-              <h4 class="text-white font-bold text-lg">Croissance B2B</h4>
-            </div>
+            <h4 class="text-white font-bold text-lg">Croissance B2B</h4>
           </div>
         </div>
       </div>
-    </UContainer>
-  </section>
+    </div>
+  </UPageSection>
 </template>
