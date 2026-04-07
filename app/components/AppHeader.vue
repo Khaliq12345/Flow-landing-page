@@ -1,14 +1,10 @@
 <template>
-  <UHeader
-    :ui="{
-      root: 'fixed top-0 w-full z-50 backdrop-blur-md bg-[#f9f9fc]/70 shadow-sm',
-    }"
-  >
+  <UHeader>
     <!-- Logo -->
     <template #title>
       <NuxtLink
         to="/"
-        class="text-2xl font-bold tracking-tighter text-[#002f55] font-[Manrope]"
+        class="text-2xl font-bold tracking-tighter text-flow-blue-500 font-[Manrope]"
       >
         Flow
       </NuxtLink>
@@ -18,8 +14,7 @@
     <UNavigationMenu
       :items="navItems"
       :ui="{
-        link: 'font-[Manrope] text-sm font-semibold tracking-tight text-[#3f4945] hover:text-[#002f55] transition-all duration-300',
-        linkActive: 'text-[#29695b] border-b-2 border-[#29695b]',
+        link: 'font-[Manrope] text-sm font-semibold tracking-tight text-flow-neutral-900 hover:text-flow-blue-500 transition-all duration-300',
       }"
     />
 
@@ -29,8 +24,7 @@
         orientation="vertical"
         :items="navItems"
         :ui="{
-          link: 'font-[Manrope] text-sm font-semibold tracking-tight text-[#3f4945] hover:text-[#002f55]',
-          linkActive: 'text-[#29695b]',
+          link: 'font-[Manrope] text-sm font-semibold tracking-tight text-flow-neutral-900 hover:text-flow-blue-500',
         }"
       />
     </template>
@@ -38,24 +32,24 @@
 </template>
 
 <script setup lang="ts">
-import type { NavigationMenuItem } from '@nuxt/ui'
+import type { NavigationMenuItem } from "@nuxt/ui";
 
-const route = useRoute()
+const route = useRoute();
 
 const navItems = computed<NavigationMenuItem[]>(() => [
   {
-    label: 'Home',
-    to: '/',
-    active: route.path === '/',
+    label: "Home",
+    to: "/",
+    active: route.path === "/",
   },
   {
-    label: 'Demo',
-    to: '/demo',
-    active: route.path === '/demo',
+    label: "Demo",
+    to: "/demo",
+    active: route.path === "/demo",
   },
   {
-    label: 'Pricing',
-    to: '/#pricing',
+    label: "Pricing",
+    to: "/#pricing",
   },
-])
+]);
 </script>
