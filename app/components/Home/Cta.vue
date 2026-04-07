@@ -3,10 +3,10 @@
     title="Prêt à automatiser votre croissance ?"
     :links="links"
     :ui="{
-      root: 'bg-[#f3f3f6] py-16',
+      root: 'bg-flow-neutral-200 py-16',
       container: 'max-w-4xl text-center',
       title:
-        'font-[Manrope] text-4xl md:text-5xl font-extrabold text-[#002f55] leading-tight',
+        'font-[Manrope] text-4xl md:text-5xl font-extrabold text-flow-blue-500 leading-tight',
     }"
   />
 </template>
