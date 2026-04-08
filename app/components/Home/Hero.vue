@@ -10,8 +10,8 @@
       headline:
         'inline-flex items-center px-3 py-1 rounded-full bg-[#acedda] text-[#065043] text-xs font-bold tracking-wider uppercase',
       title:
-        'font-[Manrope] text-5xl md:text-7xl font-extrabold tracking-tighter leading-[1.1] text-[#002f55]',
-      description: 'text-lg md:text-xl text-[#3f4945] leading-relaxed',
+        'font-[Manrope] text-5xl md:text-7xl font-extrabold tracking-tighter leading-[1.1] text-flow-blue-500',
+      description: 'text-lg md:text-xl text-flow-neutral-900 leading-relaxed',
     }"
   >
     <!-- Slot par défaut : illustration à droite -->
@@ -20,12 +20,12 @@
         class="relative z-10 rounded-md overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500"
       >
         <video
-          src="/vid1.mp4"
+          src="/demo/vid1.mp4"
           autoplay
           loop
           muted
           playsinline
-          class="w-full aspect-[4/5] object-cover"
+          class="w-full aspect-4/5 object-cover"
         ></video>
       </div>
 
@@ -36,10 +36,10 @@
           <UIcon name="i-lucide-zap" class="w-6 h-6" />
         </div>
         <div>
-          <div class="text-sm font-bold text-[#002f55]">
+          <div class="text-sm font-bold text-flow-blue-500">
             Automatisation Totale
           </div>
-          <div class="text-xs text-[#3f4945]">
+          <div class="text-xs text-flow-neutral-900">
             Production 24/7 pour votre business
           </div>
         </div>
@@ -49,7 +49,7 @@
     <!-- Surcharge du slot title pour le span coloré -->
     <template #title>
       Solution de Génération de Contenu
-      <span class="text-[#29695b]">Automatisée</span>
+      <span class="text-flow-green-500">Automatisée</span>
     </template>
   </UPageHero>
 </template>

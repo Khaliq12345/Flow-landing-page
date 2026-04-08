@@ -1,44 +1,42 @@
 <template>
-  <section class="py-16 bg-[#f3f3f6]">
-    <UContainer>
+  <UPageSection class="py-16 bg-flow-neutral-200">
+    <div
+      class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8"
+    >
+      <div class="max-w-2xl">
+        <h2
+          class="font-[Manrope] text-4xl md:text-5xl font-extrabold text-flow-blue-500 mb-6"
+        >
+          Pourquoi choisir Flow ?
+        </h2>
+        <p class="text-flow-neutral-900 text-lg leading-relaxed">
+          Nous redéfinissons la création de contenu pour les entreprises
+          africaines en alliant technologie de pointe et expertise locale.
+        </p>
+      </div>
       <div
-        class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8"
+        class="text-flow-green-500 font-[Manrope] font-bold text-6xl opacity-20 hidden md:block"
       >
-        <div class="max-w-2xl">
-          <h2
-            class="font-[Manrope] text-4xl md:text-5xl font-extrabold text-[#002f55] mb-6"
-          >
-            Pourquoi choisir Flow ?
-          </h2>
-          <p class="text-[#3f4945] text-lg leading-relaxed">
-            Nous redéfinissons la création de contenu pour les entreprises
-            africaines en alliant technologie de pointe et expertise locale.
-          </p>
-        </div>
-        <div
-          class="text-[#29695b] font-[Manrope] font-bold text-6xl opacity-20 hidden md:block"
-        >
-          01
-        </div>
+        01
       </div>
+    </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div
-          v-for="(benefit, index) in benefits"
-          :key="index"
-          class="bg-white p-10 rounded-[0.25rem] hover:-translate-y-2 transition-transform duration-300 shadow-sm"
-        >
-          <UIcon :name="benefit.icon" class="text-4xl text-[#29695b] mb-6" />
-          <h3 class="font-[Manrope] text-xl font-bold text-[#002f55] mb-4">
-            {{ benefit.title }}
-          </h3>
-          <p class="text-[#3f4945] leading-relaxed">
-            {{ benefit.description }}
-          </p>
-        </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div
+        v-for="(benefit, index) in benefits"
+        :key="index"
+        class="bg-white p-10 rounded-[0.25rem] hover:-translate-y-2 transition-transform duration-300 shadow-sm"
+      >
+        <UIcon :name="benefit.icon" class="text-4xl text-flow-green-500 mb-6" />
+        <h3 class="font-[Manrope] text-xl font-bold text-flow-blue-500 mb-4">
+          {{ benefit.title }}
+        </h3>
+        <p class="text-flow-neutral-900 leading-relaxed">
+          {{ benefit.description }}
+        </p>
       </div>
-    </UContainer>
-  </section>
+    </div>
+  </UPageSection>
 </template>
 
 <script setup lang="ts">

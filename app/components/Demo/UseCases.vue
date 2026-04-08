@@ -1,33 +1,33 @@
 <template>
-  <section class="py-16 bg-[#f9f9fc]">
-    <UContainer>
-      <div class="text-center mb-20">
+  <UPageSection class="bg-flow-neutral-100">
+    
+      <div class="text-center">
         <h2
-          class="font-[Manrope] text-3xl font-bold text-[#002f55] mb-4 tracking-tight"
+          class="font-[Manrope] text-3xl font-bold text-flow-blue-500 mb-4 tracking-tight"
         >
           Cas d'Utilisation
         </h2>
-        <p class="text-[#3f4945] max-w-xl mx-auto">
-          Comment nos partenaires utilisent Sahel Tech Pro pour dominer leur
+        <p class="text-flow-neutral-900 max-w-xl mx-auto">
+          Comment nos partenaires utilisent Flow pour dominer leur
           marché.
         </p>
       </div>
 
-      <div class="space-y-4">
+      <div class="space-y-0">
         <!-- Case 1 -->
         <div
-          class="flex flex-col md:flex-row items-center bg-[#f3f3f6] rounded-[0.5rem] overflow-hidden"
+          class="flex flex-col md:flex-row items-center bg-flow-neutral-200 rounded-[0.5rem] overflow-hidden"
         >
           <div class="md:w-1/2 p-12">
-            <h3 class="text-2xl font-[Manrope] font-bold text-[#002f55] mb-4">
+            <h3 class="text-2xl font-[Manrope] font-bold text-flow-blue-500 mb-4">
               Coulisses & Culture
             </h3>
-            <p class="text-[#3f4945] leading-relaxed mb-6">
+            <p class="text-flow-neutral-900 leading-relaxed mb-6">
               Humanisez votre marque en montrant l'envers du décor. Nos
               algorithmes sélectionnent les meilleurs moments de vos journées
               pour créer des capsules immersives qui renforcent la confiance.
             </p>
-            <UButton variant="link" class="p-0 text-[#29695b] font-bold">
+            <UButton variant="link" class="p-0 text-flow-green-500 font-bold">
               Voir les exemples
               <template #trailing>
                 <UIcon name="i-lucide-arrow-right" />
@@ -48,15 +48,15 @@
           class="flex flex-col md:flex-row-reverse items-center bg-white rounded-[0.5rem] overflow-hidden shadow-sm"
         >
           <div class="md:w-1/2 p-12">
-            <h3 class="text-2xl font-[Manrope] font-bold text-[#002f55] mb-4">
+            <h3 class="text-2xl font-[Manrope] font-bold text-flow-blue-500 mb-4">
               Révélations de Produits
             </h3>
-            <p class="text-[#3f4945] leading-relaxed mb-6">
+            <p class="text-flow-neutral-900 leading-relaxed mb-6">
               Créez l'anticipation avant chaque lancement. Des visuels
               mystérieux aux démonstrations techniques, nous orchestrons votre
               montée en puissance visuelle.
             </p>
-            <UButton variant="link" class="p-0 text-[#29695b] font-bold">
+            <UButton variant="link" class="p-0 text-flow-green-500 font-bold">
               Explorer le module
               <template #trailing>
                 <UIcon name="i-lucide-arrow-right" />
@@ -72,6 +72,6 @@
           </div>
         </div>
       </div>
-    </UContainer>
-  </section>
+    
+  </UPageSection>
 </template>
