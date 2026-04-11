@@ -41,6 +41,8 @@
 
           <UButton
             class="relative z-10 self-start mt-8 bg-flow-blue-500 text-white rounded-[0.125rem] hover:bg-[#00457a]"
+            :to="whatsappLink()"
+            target="_blank"
           >
             En savoir plus
           </UButton>

@@ -6,10 +6,9 @@
     description="Des solutions adaptées à la taille de votre entreprise."
     :ui="{
       title: 'font-[Manrope] text-4xl font-extrabold text-flow-blue-500',
-      description: 'text-flow-neutral-900'
+      description: 'text-flow-neutral-900',
     }"
   >
-
     <UPricingPlans>
       <!-- Formule Essentielle -->
       <UPricingPlan
@@ -23,6 +22,10 @@
           color: 'neutral',
           variant: 'outline',
           block: true,
+          to: whatsappLink(
+            'Bonjour, je suis intéressé par la Formule Essentielle de Flow.',
+          ),
+          target: '_blank',
         }"
         :ui="{
           root: 'bg-white border-2 border-flow-neutral-500 hover:border-flow-amber-500 transition-all rounded-lg',
@@ -31,7 +34,6 @@
           featureIcon: 'text-flow-amber-500',
         }"
       />
-
       <!-- Formule Premium -->
       <UPricingPlan
         title="Formule Premium"
@@ -39,7 +41,14 @@
         billing-cycle="FCFA / mois"
         :badge="{ label: 'PREMIUM', color: 'success', variant: 'subtle' }"
         :features="premiumFeatures"
-        :button="{ label: 'Passer au Premium', block: true }"
+        :button="{
+          label: 'Passer au Premium',
+          block: true,
+          to: whatsappLink(
+            'Bonjour, je suis intéressé par la Formule Premium de Flow.',
+          ),
+          target: '_blank',
+        }"
         :ui="{
           root: 'bg-flow-blue-500 text-white border-2 border-white/20 shadow-2xl scale-105 z-10 rounded-lg',
           title: 'font-[Manrope] font-bold text-white',
@@ -54,6 +63,8 @@
 </template>
 
 <script setup lang="ts">
+import { whatsappLink } from "~/utils/contact";
+
 const essentialFeatures = [
   "3 vidéos par semaine",
   "5 images par semaine",

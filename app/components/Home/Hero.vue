@@ -55,20 +55,5 @@
 </template>
 
 <script setup lang="ts">
-import type { ButtonProps } from "@nuxt/ui";
-
-const links = ref<ButtonProps[]>([
-  {
-    label: "Commencez Maintenant",
-    color: "neutral",
-    size: "xl",
-  },
-  {
-    label: "Prendre un RDV",
-    color: "neutral",
-    variant: "outline",
-    size: "xl",
-    leadingIcon: "i-lucide-calendar",
-  },
-]);
+const { links } = UseLinks();
 </script>

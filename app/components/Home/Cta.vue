@@ -14,17 +14,5 @@
 <script setup lang="ts">
 import type { ButtonProps } from "@nuxt/ui";
 
-const links = ref<ButtonProps[]>([
-  {
-    label: "Commencez Maintenant",
-    color: "neutral",
-    size: "xl",
-  },
-  {
-    label: "Contactez Nous",
-    color: "neutral",
-    variant: "outline",
-    size: "xl",
-  },
-]);
+const { links } = UseLinks();
 </script>

@@ -28,11 +28,12 @@
 import type { ButtonProps } from "@nuxt/ui";
 
 const links = ref<ButtonProps[]>([
-  // need to setup contact method/link
   {
     label: "Contactez-nous",
     size: "xl",
     ui: { base: "bg-[#fabd00] text-[#3c2b00] font-bold hover:bg-[#e6ac00]" },
+    to: whatsappLink(),
+    target: "_blank",
   },
   {
     label: "Voir les tarifs",

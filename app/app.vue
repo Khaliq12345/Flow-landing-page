@@ -1,4 +1,16 @@
-<script setup>
+<template>
+  <UApp>
+    <AppHeader />
+
+    <UMain class="bg-flow-neutral-100">
+      <NuxtPage />
+    </UMain>
+
+    <AppFooter />
+  </UApp>
+</template>
+
+<script setup lang="ts">
 useHead({
   meta: [{ name: "viewport", content: "width=device-width, initial-scale=1" }],
   link: [{ rel: "icon", href: "/favicon.ico" }],
@@ -18,15 +30,3 @@ useSeoMeta({
   ogDescription: description,
 });
 </script>
-
-<template>
-  <UApp>
-    <AppHeader />
-
-    <UMain class="bg-flow-neutral-100">
-      <NuxtPage />
-    </UMain>
-
-    <AppFooter />
-  </UApp>
-</template>
