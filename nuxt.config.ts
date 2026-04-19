@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "FLOW",
-      link: [{ rel: "icon", type: "image/png", href: "/FLOW.png" }],
+      link: [{ rel: "icon", type: "image/png", href: "/flow.png" }],
     },
   },
 
