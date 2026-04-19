@@ -7,8 +7,22 @@
 </template>
 <script setup lang="ts">
 useSeoMeta({
-  title: "Flow Demo",
+  title: "Démo Flow – Voyez l'IA en Action",
   description:
-    "Experience the power of Flow with our interactive demo. See how our AI content creation tool can help you generate high-quality content quickly and easily. Explore our features, use cases, and see real examples of how Flow can transform your content creation process. Whether you're a marketer, blogger, or business owner, our demo will show you how Flow can help you create compelling content that drives results.",
+    "Découvrez Flow en direct : vidéos générées automatiquement, visuels sur mesure et cas d'usage concrets pour votre entreprise. Aucune équipe de montage requise.",
+
+  ogTitle: "Démo Flow – Voyez l'IA en Action",
+  ogDescription:
+    "Explorez les capacités de Flow avec des exemples réels. Vidéos, visuels et contenu marketing générés par IA pour les entreprises B2B africaines.",
+  ogImage: "/og-image-demo.png",
+  ogUrl: "https://flow.tech2work.tech/demo",
+  ogType: "website",
+  ogLocale: "fr_FR",
+
+  twitterCard: "summary_large_image",
+  twitterTitle: "Démo Flow – Contenu IA pour Entreprises",
+  twitterDescription:
+    "Voyez comment Flow génère du contenu marketing premium automatiquement. Testez en direct.",
+  twitterImage: "/og-image-demo.png",
 });
 </script>

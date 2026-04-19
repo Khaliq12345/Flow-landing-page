@@ -8,8 +8,22 @@
 </template>
 <script setup lang="ts">
 useSeoMeta({
-  title: "Flow - AI Content Creation Tool",
+  title: "Flow – Génération de Contenu Automatisée pour Entreprises B2B",
   description:
-    "Flow is a powerful AI content creation tool that helps you generate high-quality content quickly and easily. With Flow, you can create blog posts, social media content, product descriptions, and more with just a few clicks. Flow uses advanced AI algorithms to understand your content needs and generate relevant and engaging content that resonates with your audience. Whether you're a marketer, blogger, or business owner, Flow is the perfect tool to help you create compelling content that drives results.",
+    "Flow propulse votre marketing avec des vidéos et visuels premium générés automatiquement. 70% moins cher, sans équipe de montage. Essayez dès maintenant.",
+
+  ogTitle: "Flow – Génération de Contenu Automatisée pour Entreprises B2B",
+  ogDescription:
+    "Automatisez votre production de contenu marketing avec Flow. Vidéos, visuels et posts générés par IA — rapides, professionnels et adaptés à votre marque.",
+  ogImage: "/og-image.png",
+  ogUrl: "https://flow.tech2work.tech",
+  ogType: "website",
+  ogLocale: "fr_FR",
+
+  twitterCard: "summary_large_image",
+  twitterTitle: "Flow – Contenu Marketing Automatisé par IA",
+  twitterDescription:
+    "Vidéos et visuels premium générés automatiquement. 70% moins cher, production 24/7.",
+  twitterImage: "/og-image.png",
 });
 </script>
