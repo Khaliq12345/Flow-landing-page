@@ -1,11 +1,14 @@
 <template>
-  <HomeHero />
-  <HomeBenefits />
-  <HomeSteps />
-  <HomeContentTypes />
-  <HomePricing />
-  <HomeCta />
+  <div>
+    <HomeHero />
+    <HomeBenefits />
+    <HomeSteps />
+    <HomeContentTypes />
+    <HomePricing />
+    <HomeCta />
+  </div>
 </template>
+
 <script setup lang="ts">
 useSeoMeta({
   title: "Flow – Génération de Contenu Automatisée pour Entreprises B2B",

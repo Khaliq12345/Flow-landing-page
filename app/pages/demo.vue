@@ -1,10 +1,13 @@
 <template>
-  <DemoHeader />
-  <DemoVideoGallery />
-  <DemoVisuals />
-  <DemoUseCases />
-  <DemoCta />
+  <div>
+    <DemoHeader />
+    <DemoVideoGallery />
+    <DemoVisuals />
+    <DemoUseCases />
+    <DemoCta />
+  </div>
 </template>
+
 <script setup lang="ts">
 useSeoMeta({
   title: "Démo Flow – Voyez l'IA en Action",
@@ -14,7 +17,7 @@ useSeoMeta({
   ogTitle: "Démo Flow – Voyez l'IA en Action",
   ogDescription:
     "Explorez les capacités de Flow avec des exemples réels. Vidéos, visuels et contenu marketing générés par IA pour les entreprises B2B africaines.",
-  ogImage: "/og-image-demo.png",
+  ogImage: "/og-image.png",
   ogUrl: "https://flow.tech2work.tech/demo",
   ogType: "website",
   ogLocale: "fr_FR",
@@ -23,6 +26,6 @@ useSeoMeta({
   twitterTitle: "Démo Flow – Contenu IA pour Entreprises",
   twitterDescription:
     "Voyez comment Flow génère du contenu marketing premium automatiquement. Testez en direct.",
-  twitterImage: "/og-image-demo.png",
+  twitterImage: "/og-image.png",
 });
 </script>
