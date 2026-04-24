@@ -20,7 +20,7 @@
         class="relative z-10 rounded-md overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500"
       >
         <video
-          src="/demo/vid1.mp4"
+          src="/home/vid.mp4"
           autoplay
           loop
           muted

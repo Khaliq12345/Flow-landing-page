@@ -58,6 +58,33 @@
           featureTitle: 'text-white',
         }"
       />
+      <!-- Formule prestige -->
+      <UPricingPlan
+        title="Formule Prestige"
+        price="100 000"
+        billing-cycle="FCFA / mois"
+        :badge="{ label: 'PREMIUM', variant: 'subtle' }"
+        :features="prestigeFeatures"
+        :button="{
+          label: 'Passer au Premium',
+          block: true,
+          to: whatsappLink(
+            'Bonjour, je suis intéressé par la Formule Prestige de Flow.',
+          ),
+          target: '_blank',
+        }"
+        :ui="{
+          root: 'bg-yellow-800 text-white border-2 border-white/20 shadow-2xl z-10 rounded-lg',
+          title: 'font-[Manrope] font-bold text-white',
+          price: 'font-[Manrope] font-black text-white',
+          billingCycle: 'text-white/70',
+          featureIcon: 'text-[#ede6ac]',
+          featureTitle: 'text-white',
+          badge: 'text-amber-300 bg-amber-400/30',
+          button:
+            'border border-amber-300 bg-transparentu_i hover:bg-amber-900/70',
+        }"
+      />
     </UPricingPlans>
   </UPageSection>
 </template>
@@ -78,5 +105,11 @@ const premiumFeatures = [
   "Automatisation & Analytics",
   "2 visites média par semaine",
   "Support prioritaire 24/7",
+];
+
+const prestigeFeatures = [
+  "Toutes les fonctionnalités du plan Premium",
+  "Développement de site web sur mesure",
+  "Accompagnement à la prospection",
 ];
 </script>

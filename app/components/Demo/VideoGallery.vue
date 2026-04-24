@@ -133,6 +133,30 @@ const slides = [
     image: "/demo/images/img6.jpg",
     imageTitle: "Campagne Créative",
   },
+  {
+    video: "/demo/vid7.mp4",
+    videoTitle: "Motion Design",
+    image: "/demo/images/img7.jpg",
+    imageTitle: "Énergie Visuelle",
+  },
+  {
+    video: "/demo/vid8.mp4",
+    videoTitle: "Motion Design",
+    image: "/demo/images/img8.jpg",
+    imageTitle: "Dynamique Visuelle",
+  },
+  {
+    video: "/demo/vid9.mp4",
+    videoTitle: "Motion Design",
+    image: "/demo/images/img9.jpg",
+    imageTitle: "Impact Graphique",
+  },
+  {
+    video: "/demo/vid10.mp4",
+    videoTitle: "Motion Design",
+    image: "/demo/images/img10.jpg",
+    imageTitle: "Séquence Créative",
+  },
 ];
 
 const currentSlide = computed(() => slides[currentIndex.value]);
