@@ -6,9 +6,12 @@
     :ui="{
       title: 'font-[Manrope] text-4xl font-extrabold text-flow-blue-500 mb-4',
       description: 'text-flow-neutral-900',
+      container: 'mx-auto',
     }"
   >
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+    <div
+      class="grid grid-cols-1 md:grid-cols-3 gap-4 justify-items-center "
+    >
       <div
         v-for="(step, index) in steps"
         :key="index"
@@ -51,11 +54,6 @@ const steps = [
     title: "Identité de Marque",
     description:
       "Intégration de vos couleurs, logos et ton de voix pour un contenu unique.",
-  },
-  {
-    title: "Collecte de Média",
-    description:
-      "Visites sur site 2x par semaine pour capturer l'essence de votre activité.",
   },
   {
     title: "Livraison Auto",
